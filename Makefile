@@ -9,4 +9,5 @@ install:
 	npm install
 
 run:
-	DEBUG=keepcoding-node-api:* npm start
+	docker-compose up
+#	DEBUG=keepcoding-node-api:* npm start
