@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "prestart": "node bin/db-initialize.js",
+    "prestart": "node bin/db-initialize.js &",
     "start": "node ./bin/www"
   },
   "dependencies": {
