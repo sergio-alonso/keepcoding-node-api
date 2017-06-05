@@ -1,8 +1,8 @@
-var mongoose = require('mongoose');
-var Schema = mongoose.Schema;
+const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
 
 // Create a schema
-var advertSchema = new Schema({
+const advertSchema = new Schema({
   name: String,
   sale: Boolean,
   price: Number,
@@ -11,7 +11,7 @@ var advertSchema = new Schema({
 });
 
 // Create a model using the schema
-var Advert = mongoose.model('Advert', advertSchema);
+const Advert = mongoose.model('Advert', advertSchema);
 
 // Make this available in our Node applications
 module.exports = Advert;
