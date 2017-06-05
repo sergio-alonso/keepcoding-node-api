@@ -4,6 +4,17 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var mongoose = require('mongoose');
+
+const url = 'mongodb://172.17.0.1:27017/keepcoding';
+mongoose.connect(url);
+const db = mongoose.connection;
+db.once('open', function() {
+  console.log('Connected to DB');
+});
+db.on('error', function(err) {
+  console.error.bind(console, 'connection error:', err)
+});
 
 var index = require('./routes/index');
 var users = require('./routes/users');
