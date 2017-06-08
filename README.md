@@ -1,1 +1,7 @@
-KeepCoding Node.js API
+# KeepCoding Node.js API
+
+## Run application
+
+```bash
+make run
+```
